@@ -1,3 +1,39 @@
+#root {
+  margin: 0;
+}
+.item {
+  width: 20vw;
+}
+
+.thumbnail {
+  width: 20vw;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vh;
+}
+
+.shopImage {
+  height: 40vh;
+}
+
+.imageAlign {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.itemName {
+  width: 100vw;
+  text-align: center;
+}
+
+.addSubBtns {
+  display: flex;
+}
+
 .App {
   text-align: center;
 }
