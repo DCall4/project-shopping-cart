@@ -16,7 +16,7 @@ export default function Shop() {
                             <div key={item.id} className="item">
                                 <Link to={`./${item.id}`}>
                                     <img className="thumbnail" src={item.image} alt={item.name} />
-                                    <div>{item.name}</div>
+                                    <div className="itemName">{item.name}</div>
                                     <div>{formatCurrency(item.price)}</div>
                                 </Link>
                                         {getItemQuantity(item.id) === 0 ? <button className="addToCart"

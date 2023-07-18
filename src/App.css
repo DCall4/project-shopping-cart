@@ -45,7 +45,7 @@ a {
 }
 
 .item {
-  width: 40vw;
+  width: 350px;
   height: 35vh;
   background-color: lightblue;
   text-align: center;
@@ -72,15 +72,16 @@ a {
 }
 
 .thumbnail {
-  width: 20vw;
+  width: 200px;
   align-self: center;
 }
 
 .shop {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1vh;
   margin-left: 3vw;
+  column-gap: 5vw;
 }
 
 .shopImage {
@@ -94,6 +95,11 @@ a {
 
 .price {
   text-align: center;
+}
+
+.itemName {
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .removeBtnDiv {
@@ -139,7 +145,9 @@ a {
 }
 
 .cartItems {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1vh;
 }
 

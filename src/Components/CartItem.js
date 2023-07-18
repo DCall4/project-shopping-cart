@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useShoppingCart } from "../Context/ShoppingCartContext";
 import ShopItems from "../Data/ShopItems";
 import formatCurrency from "../Utilities/formatCurrency";
@@ -10,9 +11,11 @@ export function CartItem({id, quantity}) {
 
     return (
         <div className="item">
-            <img src={item.image} alt={item.name} className="thumbnail"/>
+            <Link to={`./shop/${item.id}`}>
+                <img src={item.image} alt={item.name} className="thumbnail"/>
+            </Link>
             <div>
-                <div className="cartName">
+                <div className="itemName">
                     {item.name}{" "}
                     {getItemQuantity(item.id) > 1 && (
                         <span className="cartItemQuantity">
