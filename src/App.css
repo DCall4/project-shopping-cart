@@ -1,18 +1,86 @@
-#root {
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+head {
+  height: 0;
+  width: 0;
+  padding: 0;
   margin: 0;
 }
+
+#root {
+  margin: 0;
+  margin-top: 6vh;
+}
+
+.nav {
+  background-color: whitesmoke;
+  box-shadow: 0vh 1vh 1vh gray;
+  padding-top: 0.01vh;
+  padding-bottom: 0.01vh;
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  justify-content: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  margin: 1vh 1vw 1vh 0;
+  text-align: center;
+  font-size: 2vh;
+  text-shadow: 3px 3px 4px gray;
+}
+
 .item {
-  width: 20vw;
+  width: 40vw;
+  height: 35vh;
+  background-color: lightblue;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+  border-radius: 4vh;
+  box-shadow: 5px 3px 4px gray;
+}
+
+.addToCart {
+
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.addSubBtns {
+  justify-content: center;
 }
 
 .thumbnail {
   width: 20vw;
+  align-self: center;
 }
 
 .shop {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1vh;
+  margin-left: 3vw;
 }
 
 .shopImage {
@@ -22,11 +90,36 @@
 .imageAlign {
   display: flex;
   justify-content: center;
-  width: 100vw;
+}
+
+.price {
+  text-align: center;
+}
+
+.removeBtnDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh;
+}
+
+.product {
+  background-color: lightblue;
+  padding: 5vh;
+  margin: 5vh;
+  box-shadow: 5px 3px 4px gray;
+  border-radius: 5vh;
+}
+
+.itemDescription {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 3vw;
+  background-color: blanchedalmond;
+  border-radius: 3vh;
+  box-shadow: 5px 3px 4px gray;
 }
 
 .itemName {
-  width: 100vw;
   text-align: center;
 }
 
@@ -35,14 +128,29 @@
 }
 
 .cart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70vw;
+  z-index: 4;
+  display: grid;
+  justify-items: center;
+  gap: 1vh;
+}
+
+.cartItems {
+  display: grid;
+  gap: 1vh;
+}
+
+.cartBackground {
   position: fixed;
   right: 0;
   top: 0;
   height: 100vh;
   width: 70vw;
-  background-color: bisque;
-  z-index: 4;
-  opacity: 1;
+  background-color: blanchedalmond;
+  z-index: 3;
 }
 
 .cartFade {
@@ -54,6 +162,14 @@
   background-color: gray;
   opacity: .5;
   z-index: 3;
+}
+
+.closeBtn {
+  height: 2vh;
+  border-radius: .75vh;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
 }
 
 .App {

@@ -9,7 +9,7 @@ export default function Shop() {
 
         return (
             <div>
-                <div>Shop</div>
+                <div className="title">Shop</div>
                 <div className="shop">
                     {ShopItems.map(item => {
                         return (
@@ -19,10 +19,9 @@ export default function Shop() {
                                     <div>{item.name}</div>
                                     <div>{formatCurrency(item.price)}</div>
                                 </Link>
-                                    <div className="quantity">
-                                        {getItemQuantity(item.id) === 0 ? <button 
+                                        {getItemQuantity(item.id) === 0 ? <button className="addToCart"
                                                             onClick={() => increaseCartQuantity(item.id)}>Add to Cart</button> : 
-                                            <div>
+                                            <div className="quantity">
                                                 <div className="addSubBtns">
                                                     <button onClick={() => increaseCartQuantity(item.id)}>+</button>
                                                     <div>
@@ -38,7 +37,6 @@ export default function Shop() {
                                             </div>
                                         }
                                     </div>
-                                </div>
                             
                     )})}
                 </div>

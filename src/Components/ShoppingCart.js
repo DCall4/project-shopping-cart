@@ -8,17 +8,18 @@ export default function ShoppingCart() {
     return (
         <>
             <div className="cartFade" onClick={() => closeCart()}></div>
+            <div className="cartBackground"></div>
             <div className="cart">
-                <div className="cartHeader">
-                    Cart
-                </div>
-                <button onClick={() => closeCart()}>Close</button>
+                    <div className="cartTitle title">
+                        Cart
+                    </div>
+                <button className="closeBtn" onClick={() => closeCart()}>X</button>
                 <div className="cartItems">
                     {cartItems.map(item => (
                         <CartItem key={item.id} {...item}/>
                     ))}
                 </div>
-                <div className="cartTotalPrice">
+                <div className="title">
                     Total {formatCurrency(cartItems.reduce((total, cartItem) => {
                         const item = ShopItems.find(i => i.id === cartItem.id)
                         return total + (item?.price || 0) *cartItem.quantity

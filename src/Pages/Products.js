@@ -11,7 +11,7 @@ export default  function Products() {
 
     return (
         <div>
-            <div key={item.id} className="item">
+            <div key={item.id} className="product">
                 <div className="imageAlign">
                     <img className="shopImage" src={item.image} alt={item.name} />
                 </div>
@@ -32,7 +32,7 @@ export default  function Products() {
                                         </div>
                                             <button onClick={() => decreaseCartQuantity(item.id)}>-</button>
                                 </div>
-                                    <div>
+                                    <div className="removeBtnDiv">
                                         <button className="remove"
                                             onClick={() => removeFromCart(item.id)}>Remove
                                         </button>
@@ -40,7 +40,7 @@ export default  function Products() {
                             </div>
                 }
                 <br />
-                <div>{item.description}</div>
+                <div className="itemDescription">{item.description}</div>
             </div>
         </div>
     )

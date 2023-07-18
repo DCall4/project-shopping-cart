@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 import { useShoppingCart } from "../Context/ShoppingCartContext";
 
 export default function Navbar() {
-    const {openCart, cartQuantity, isOpen} = useShoppingCart();
+    const {openCart, cartQuantity} = useShoppingCart();
 
     return (
-    <nav>
-        <ul>
+    <nav className="nav">
+        <ul className="navBar">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/shop">Shop</Link></li>
             {cartQuantity > 0 && (
